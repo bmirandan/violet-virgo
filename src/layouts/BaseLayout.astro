@@ -1,0 +1,51 @@
+---
+import "@fontsource/poppins";
+import "@fontsource/poppins/700.css";
+---
+
+<style>
+  html {
+    color: #111;
+    background-color: #111;
+    margin: 0 150px;
+    font-family: "poppins";
+  }
+
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    padding: 16px;
+  }
+
+  @media (max-width: 768px) {
+    html {
+      margin: unset;
+    }
+
+    .parent {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      grid-template-columns: unset;
+      grid-template-rows: unset;
+      grid-column-gap: unset;
+      grid-row-gap: unset;
+    }
+  }
+</style>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title></title>
+  </head>
+  <body class="parent">
+    <slot />
+  </body>
+</html>

@@ -1,16 +1,183 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PeopleIcon from "../components/PeopleIcon.astro";
+import ConfigIcon from "../components/ConfigIcon.astro";
+import ChatIcon from "../components/ChatIcon.astro";
+import InfinityIcon from "../components/InfinityIcon.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<style>
+  .div1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    background-color: #01aa89;
+    padding: 24px;
+    gap: 24px;
+    border-radius: 20px;
+    grid-area: 1 / 1 / 4 / 3;
+    color: #111;
+
+    > h1 {
+      font-weight: bold;
+      font-size: 24px;
+    }
+    > p {
+      padding: 20px;
+      text-align: justify;
+      font-size: 12px;
+    }
+  }
+
+  .div2 {
+    border-radius: 20px;
+    background-color: #abaddd;
+    padding: 24px;
+    grid-area: 1 / 3 / 4 / 4;
+  }
+
+  .div3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 24px;
+    background-color: #beed3a;
+    grid-area: 1 / 4 / 3 / 5;
+
+    > button {
+      background-color: #2a27e2;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 12px 24px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background-color: #1a17d2;
+      }
+    }
+  }
+
+  .div4 {
+    color: white;
+    background-color: #2a27e2;
+    border-radius: 20px;
+    padding: 24px;
+    grid-area: 3 / 4 / 6 / 5;
+
+    > p {
+
+      font-size: 13px;
+    }
+  }
+
+  .div5 {
+    border-radius: 20px;
+    padding: 24px;
+    background-color: #fafecf;
+    grid-area: 4 / 1 / 6 / 2;
+  }
+
+  .div6 {
+    border-radius: 20px;
+    padding: 24px;
+    background-color: #feebcf;
+    grid-area: 4 / 2 / 6 / 3;
+  }
+
+  .div7 {
+    border-radius: 20px;
+    padding: 24px;
+    background-color: #fed2cf;
+    grid-area: 4 / 3 / 6 / 4;
+  }
+
+  p {
+    font-size: 14px;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  @media (max-width: 768px) {
+    .div1, .div2, .div3, .div4, .div5, .div6, .div7 {
+		margin-bottom: 16px;
+      min-height: unset;
+	  border-radius: unset;
+      max-height: unset;
+      grid-area: unset; /* Remove specific placements */
+    }
+  }
+</style>
+
+<BaseLayout>
+  <div class="div1">
+    <h1>HI! BENJAMIN MIRANDA, SOFTWARE ENGINEER BASED IN CHILE.</h1>
+    <p>
+      As a Software Developer, I specialize in Typescript and frameworks like
+      NodeJS, Angular, and Next.js, with a focus on front-end development at
+      Bice Vida, emphasizing scalable, robust solutions. My experience covers a
+      spectrum from full-stack development to leading projects in education,
+      fintech, and government, demonstrating a commitment to innovation and
+      efficiency. My work spans diverse sectors, showcasing adaptability and a
+      drive for impactful technology solutions.
+    </p>
+  </div>
+  <div class="div2">
+    <h2>Currently</h2>
+    <h4>Improving Bice Vida Client Experience</h4>
+    <p>
+      Participated in experience sprints and UI/UX studies with product
+      designers to rebuild the home experience for Bice Vida clients, enhancing
+      user satisfaction and engagement. <b>And a lot of coding</b>.
+    </p>
+    <p>Building and coding the new cross selling section</p>
+    <p>Building and coding an insurance renewal journey</p>
+  </div>
+
+  <div class="div3">
+	<ChatIcon size="64px"/>
+    <h1>Wanna Talk?</h1>
+    <button>Send me a message</button>
+  </div>
+  <div class="div4">
+    <h2>Past Experiences</h2>
+    <p><b>Bicevida</b> - Developer, 2023 to 2024</p>
+    <p><b>Upmetrics</b> - FullStack Developer (Contractor), 2022 to 2023</p>
+    <p><b>Amicar</b> - FullStack Developer, 2021 to 2023</p>
+    <p><b>Fixe</b> - FrontEnd Developer, 2020 to 2021</p>
+    <p><b>Opencluster SpA</b> - Full Stack Developer, 2017 to 2020</p>
+  </div>
+</BaseLayout>
+<div class="div5">
+  <InfinityIcon/>  </br></br>
+
+  <b>Complex System Integrations </b>
+  <p>
+    Managed Amicar's integration with nine financial entities, ensuring seamless
+    communication and efficient data exchange processes.
+  </p>
+</div>
+<div class="div6">
+	<ConfigIcon/> </br></br>
+  <b>Migration to Micro Frontend Architecture</b>
+  <p>
+    Led Upmetrics' shift to a micro frontend architecture, enhancing scalability
+    and update efficiency, requiring careful planning.
+  </p>
+</div>
+<div class="div7">
+	<PeopleIcon/> </br></br>
+
+  <b>Leading Agile Transformation</b>
+  <p>
+    Championed the adoption of agile methodologies within development teams at
+    Amicar and Fixe, enhancing project management and collaboration.
+  </p>
+</div>
