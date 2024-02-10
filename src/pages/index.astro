@@ -25,7 +25,6 @@ import InfinityIcon from "../components/InfinityIcon.astro";
     }
     > p {
       padding: 20px;
-      text-align: justify;
       font-size: 12px;
     }
   }
@@ -47,7 +46,8 @@ import InfinityIcon from "../components/InfinityIcon.astro";
     background-color: #beed3a;
     grid-area: 1 / 4 / 3 / 5;
 
-    > button {
+    > a {
+      text-decoration: none;
       background-color: #2a27e2;
       color: white;
       border: none;
@@ -57,7 +57,7 @@ import InfinityIcon from "../components/InfinityIcon.astro";
       cursor: pointer;
       transition: 0.3s;
       &:hover {
-        background-color: #1a17d2;
+        background-color: #3532e5;
       }
     }
   }
@@ -145,7 +145,6 @@ import InfinityIcon from "../components/InfinityIcon.astro";
     gap: 16px;
   }
   @media (max-width: 768px) {
-    .div1,
     .div2,
     .div3,
     .div4,
@@ -156,29 +155,48 @@ import InfinityIcon from "../components/InfinityIcon.astro";
       min-height: unset;
       max-height: unset;
     }
+
+    .div1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 16px;
+      min-height: unset;
+      max-height: unset;
+
+      > h1 {
+        font-weight: bold;
+        font-size: 24px;
+      }
+      > p {
+        padding: unset;
+        text-align: justify;
+        font-size: 14px;
+      }
+    }
   }
 </style>
 
 <BaseLayout>
   <div class="div1">
-    <h1>HI! BENJAMIN MIRANDA, SOFTWARE ENGINEER BASED IN CHILE.</h1>
+    <h1>HI! I'M BENJAMIN MIRANDA, SOFTWARE ENGINEER BASED IN CHILE.</h1>
     <p>
-      As a Software Developer, I specialize in Typescript and frameworks like
-      NodeJS, Angular, and Next.js, with a focus on front-end development
-	  
-	  My experience covers a spectrum from full-stack development to leading projects in education,
-      fintech, insurances, ong, and government, demonstrating a commitment to innovation and
-      efficiency. My work spans diverse sectors, showcasing adaptability and a
-      drive for impactful technology solutions.
+      As a <b>Software Developer</b>, I specialize in Typescript and frameworks
+      like NodeJS, Angular, and Next.js, with a focus on front-end development
+      <b>My experience covers a spectrum </b> from full-stack development to leading
+      projects in <b> education, fintech, insurances, ong, and government.</b>
+      I'm comitted to innovation and efficiency.<b> My work spans
+      diverse sectors, showcasing adaptability</b> and a drive for impactful
+      technology solutions.
     </p>
   </div>
   <div class="div2">
     <h2>Currently</h2>
     <h4>Improving Bice Vida Client Experience</h4>
     <p>
-      Participated in experience sprints with the team and UI/UX studies with product
-      designers to rebuild the home experience for Bice Vida clients, enhancing
-      user satisfaction and engagement. <b>And a lot of coding</b>.
+      Participated in experience sprints with the team and UI/UX studies with
+      product designers to rebuild the home experience for Bice Vida clients,
+      enhancing user satisfaction and engagement. <b>And a lot of coding</b>.
     </p>
     <p>Building and coding new home experience.</p>
     <p>Building and coding an insurance renewal journey.</p>
@@ -224,6 +242,6 @@ import InfinityIcon from "../components/InfinityIcon.astro";
   <div class="div3">
     <ChatIcon size="64px" />
     <h1>Wanna Talk?</h1>
-    <button>Send me a message</button>
+    <a href="https://wa.me/+56977743420" target="_blank">Send me a message</a>
   </div>
 </BaseLayout>
