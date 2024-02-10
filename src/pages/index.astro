@@ -70,7 +70,6 @@ import InfinityIcon from "../components/InfinityIcon.astro";
     grid-area: 3 / 4 / 6 / 5;
 
     > p {
-
       font-size: 13px;
     }
   }
@@ -105,13 +104,57 @@ import InfinityIcon from "../components/InfinityIcon.astro";
     gap: 24px;
   }
 
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+  }
+
+  @media (max-width: 1048px) {
+    .div5 {
+      grid-area: 6 / 1 / 8 / 2;
+    }
+    .div6 {
+      grid-area: 8 / 1 / 10 / 2;
+    }
+    .div7 {
+      grid-area: 4 / 1 / 6 / 2;
+    }
+    .div1 {
+      grid-area: 1 / 1 / 4 / 2;
+    }
+    .div2 {
+      grid-area: 1 / 2 / 4 / 3;
+    }
+    .div4 {
+      grid-area: 4 / 2 / 7 / 3;
+    }
+    .div3 {
+      grid-area: 7 / 2 / 10 / 3;
+    }
+  }
+
+  .div5,
+  .div6,
+  .div7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
   @media (max-width: 768px) {
-    .div1, .div2, .div3, .div4, .div5, .div6, .div7 {
-		margin-bottom: 16px;
+    .div1,
+    .div2,
+    .div3,
+    .div4,
+    .div5,
+    .div6,
+    .div7 {
+      margin-bottom: 16px;
       min-height: unset;
-	  border-radius: unset;
       max-height: unset;
-      grid-area: unset; /* Remove specific placements */
     }
   }
 </style>
@@ -121,10 +164,10 @@ import InfinityIcon from "../components/InfinityIcon.astro";
     <h1>HI! BENJAMIN MIRANDA, SOFTWARE ENGINEER BASED IN CHILE.</h1>
     <p>
       As a Software Developer, I specialize in Typescript and frameworks like
-      NodeJS, Angular, and Next.js, with a focus on front-end development at
-      Bice Vida, emphasizing scalable, robust solutions. My experience covers a
-      spectrum from full-stack development to leading projects in education,
-      fintech, and government, demonstrating a commitment to innovation and
+      NodeJS, Angular, and Next.js, with a focus on front-end development
+	  
+	  My experience covers a spectrum from full-stack development to leading projects in education,
+      fintech, insurances, ong, and government, demonstrating a commitment to innovation and
       efficiency. My work spans diverse sectors, showcasing adaptability and a
       drive for impactful technology solutions.
     </p>
@@ -133,51 +176,54 @@ import InfinityIcon from "../components/InfinityIcon.astro";
     <h2>Currently</h2>
     <h4>Improving Bice Vida Client Experience</h4>
     <p>
-      Participated in experience sprints and UI/UX studies with product
+      Participated in experience sprints with the team and UI/UX studies with product
       designers to rebuild the home experience for Bice Vida clients, enhancing
       user satisfaction and engagement. <b>And a lot of coding</b>.
     </p>
-    <p>Building and coding the new cross selling section</p>
-    <p>Building and coding an insurance renewal journey</p>
+    <p>Building and coding new home experience.</p>
+    <p>Building and coding an insurance renewal journey.</p>
+  </div>
+  <div class="div5">
+    <InfinityIcon />
+
+    <b>Complex System Integrations</b>
+    <p>
+      Managed Amicar's integration with nine financial entities, ensuring
+      seamless communication and efficient data exchange processes.
+    </p>
   </div>
 
-  <div class="div3">
-	<ChatIcon size="64px"/>
-    <h1>Wanna Talk?</h1>
-    <button>Send me a message</button>
+  <div class="div6">
+    <ConfigIcon />
+    <b>Migration to Micro Frontend Architecture</b>
+    <p>
+      Led Upmetrics' shift to a micro frontend architecture, enhancing
+      scalability and update efficiency, requiring careful planning.
+    </p>
   </div>
+
+  <div class="div7">
+    <PeopleIcon />
+
+    <b>Leading Agile Transformation</b>
+    <p>
+      Championed the adoption of agile methodologies within development teams at
+      Amicar and Fixe, enhancing project management and collaboration.
+    </p>
+  </div>
+
   <div class="div4">
     <h2>Past Experiences</h2>
-    <p><b>Bicevida</b> - Developer, 2023 to 2024</p>
-    <p><b>Upmetrics</b> - FullStack Developer (Contractor), 2022 to 2023</p>
+    <p><b>Bicevida</b> - Developer, 2023 to Present</p>
+    <p><b>Upmetrics</b> - FullStack Developer, 2022 to 2023</p>
     <p><b>Amicar</b> - FullStack Developer, 2021 to 2023</p>
     <p><b>Fixe</b> - FrontEnd Developer, 2020 to 2021</p>
     <p><b>Opencluster SpA</b> - Full Stack Developer, 2017 to 2020</p>
   </div>
+
+  <div class="div3">
+    <ChatIcon size="64px" />
+    <h1>Wanna Talk?</h1>
+    <button>Send me a message</button>
+  </div>
 </BaseLayout>
-<div class="div5">
-  <InfinityIcon/>  </br></br>
-
-  <b>Complex System Integrations </b>
-  <p>
-    Managed Amicar's integration with nine financial entities, ensuring seamless
-    communication and efficient data exchange processes.
-  </p>
-</div>
-<div class="div6">
-	<ConfigIcon/> </br></br>
-  <b>Migration to Micro Frontend Architecture</b>
-  <p>
-    Led Upmetrics' shift to a micro frontend architecture, enhancing scalability
-    and update efficiency, requiring careful planning.
-  </p>
-</div>
-<div class="div7">
-	<PeopleIcon/> </br></br>
-
-  <b>Leading Agile Transformation</b>
-  <p>
-    Championed the adoption of agile methodologies within development teams at
-    Amicar and Fixe, enhancing project management and collaboration.
-  </p>
-</div>
