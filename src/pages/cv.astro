@@ -1,0 +1,340 @@
+---
+import Bento from "../components/bento.astro";
+import CvLayout from "../layouts/CvLayout.astro";
+import clsx from "clsx";
+---
+
+<CvLayout>
+  <div class="profile-container">
+    <div class="profile-container-section">
+      <Bento class="profile-image" />
+      <Bento class="profile-name" header>
+        <div slot="header" class="profile-header">
+          <p>Hello! 👋🏽 I'm</p>
+        </div>
+        <div slot="content" class="profile-name-content">
+          <b>Benjamin Miranda</b>
+          <p>Full Stack Developer</p>
+        </div>
+      </Bento>
+      <Bento class="profile-languages" header>
+        <h4 slot="header">Languages</h4>
+        <div slot="content" class="profile-languages-content">
+          <div class="profile-languages-bar">
+            <span>🇬🇧 English: C1</span>
+            <Bento
+              class="profile-languages-bar-progress"
+              style="width: 168px;"
+            />
+          </div>
+          <div class="profile-languages-bar">
+            <span>🇨🇱 Spanish: Native</span>
+            <Bento
+              class="profile-languages-bar-progress"
+              style="width: 268px;"
+            />
+          </div>
+        </div>
+      </Bento>
+    </div>
+    <div class="profile-container-section">
+      <Bento class="profile-experience" header>
+        <h4 slot="header">Experience</h4>
+        <div slot="content" class="profile-experience-content-container">
+          <Bento class="profile-experience-content-current" header>
+            <p slot="header">April 2023 - Present</p>
+            <div class="profile-experience-item" slot="content">
+              <h4>Full Stack Developer</h4>
+              <p>Bice Vida - FullTime</p>
+            </div>
+            <div class="profile-experience-item" slot="content">
+              <li>
+                Plan and implement new features for the Bice Vida client
+                experience.
+              </li>
+              <li>
+                Develop and maintain the Bice Vida client portal, focusing on
+                usability and performance improvements.
+              </li>
+              <li>
+                Collaborate with cross-functional teams to ensure timely and
+                efficient delivery of projects.
+              </li>
+              <li>
+                Develop new applications to support the Bice Vida client
+                experience.
+              </li>
+            </div>
+          </Bento>
+          <Bento class={clsx("profile-experience-content")} header>
+            <p slot="header">April 2023 - Present</p>
+            <div class="profile-experience-item" slot="content">
+              <h4>Full Stack Developer</h4>
+              <p>Bice Vida - FullTime</p>
+            </div>
+            <div class="profile-experience-item" slot="content">
+              <li>
+                Plan and implement new features for the Bice Vida client
+                experience.
+              </li>
+              <li>
+                Develop and maintain the Bice Vida client portal, focusing on
+                usability and performance improvements.
+              </li>
+              <li>
+                Collaborate with cross-functional teams to ensure timely and
+                efficient delivery of projects.
+              </li>
+              <li>
+                Develop new applications to support the Bice Vida client
+                experience.
+              </li>
+            </div>
+          </Bento>
+          <Bento class={clsx("profile-experience-content")} header>
+            <p slot="header">April 2023 - Present</p>
+            <div class="profile-experience-item" slot="content">
+              <h4>Full Stack Developer</h4>
+              <p>Bice Vida - FullTime</p>
+            </div>
+            <div class="profile-experience-item" slot="content">
+              <li>
+                Plan and implement new features for the Bice Vida client
+                experience.
+              </li>
+              <li>
+                Develop and maintain the Bice Vida client portal, focusing on
+                usability and performance improvements.
+              </li>
+              <li>
+                Collaborate with cross-functional teams to ensure timely and
+                efficient delivery of projects.
+              </li>
+              <li>
+                Develop new applications to support the Bice Vida client
+                experience.
+              </li>
+            </div>
+          </Bento>
+        </div>
+      </Bento>
+      <Bento class="profile-tools" header>
+        <h4 slot="header">Tools</h4>
+        <div slot="content" class="profile-tools-content">
+          <div class="profile-tools-subsection">
+            <p class="profile-tools-subsection-title">Frontend</p>
+          </div>
+          <div class="profile-tools-subsection-content">
+            <Bento class="profile-tools-item">
+              <p slot="content">NextJS</p>
+            </Bento>
+            <Bento class="profile-tools-item">
+              <p slot="content">React</p>
+            </Bento>
+            <Bento class="profile-tools-item">
+              <p slot="content">React Native</p>
+            </Bento>
+          </div>
+          <div class="profile-tools-subsection">
+            <p class="profile-tools-subsection-title">Backend</p>
+          </div>
+          <div class="profile-tools-subsection-content">
+            <Bento class="profile-tools-item">
+              <p slot="content">NestJS</p>
+            </Bento>
+            <Bento class="profile-tools-item">
+              <p slot="content">NodeJS</p>
+            </Bento>
+            <Bento class="profile-tools-item">
+              <p slot="content">PostgreSQL</p>
+            </Bento>
+            <Bento class="profile-tools-item">
+              <p slot="content">Quarkus</p>
+            </Bento>
+          </div>
+          <div class="profile-tools-subsection">
+            <p class="profile-tools-subsection-title">Others</p>
+          </div>
+          <div class="profile-tools-subsection-content">
+            <Bento class="profile-tools-item">
+              <p slot="content">Docker</p>
+            </Bento>
+            <Bento class="profile-tools-item">
+              <p slot="content">AWS</p>
+            </Bento>
+            <Bento class="profile-tools-item">
+              <p slot="content">GCP</p>
+            </Bento>
+            <Bento class="profile-tools-item">
+              <p slot="content">Git</p>
+            </Bento>
+          </div>
+        </div>
+      </Bento>
+    </div>
+  </div>
+</CvLayout>
+
+<style>
+  .profile-tools {
+    justify-content: flex-start;
+  }
+  .profile-tools-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    flex-wrap: wrap;
+    width: 200px;
+  }
+  .profile-tools-item {
+    background-color: #1bba80;
+    color: #fff;
+    padding: 4px;
+    margin: 0;
+    width: fit-content;
+    p {
+      margin: 0;
+      font-size: 10px;
+      max-width: fit-content;
+      min-height: min-content;
+    }
+  }
+  .profile-tools-subsection {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  .profile-tools-subsection-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 10px;
+    background-color: #000;
+    color: #fff;
+    padding: 4px;
+    margin: 0;
+    width: fit-content;
+    p {
+      margin: 0;
+      font-size: 10px;
+      max-width: fit-content;
+      min-height: min-content;
+    }
+  }
+  .profile-tools-subsection-content {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .profile-experience-content-container {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .profile-experience-content-current {
+    background-color: #1bba80;
+    color: #fff;
+    font-size: 12px;
+    max-width: 600px;
+    min-height: 76px;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .profile-experience-content {
+    background-color: #fff;
+    margin-top: 16px;
+    color: #000;
+    font-size: 12px;
+    max-width: 600px;
+    min-height: 76px;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .profile-experience-item {
+    gap: 0;
+    > p,
+    h4 {
+      margin: 0;
+    }
+  }
+  .profile-experience {
+  }
+  .profile-languages {
+    justify-content: center;
+    gap: 16px;
+    max-height: 124px;
+    width: fit-content;
+  }
+  .profile-languages-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    > div > span {
+      margin: 0;
+      font-size: 12px;
+      font-weight: 400;
+      width: 120px;
+      gap: 8px;
+    }
+  }
+  .profile-languages-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: flex-end;
+    gap: 8px;
+  }
+  .profile-languages-bar-progress {
+    height: 8px;
+    border-radius: 10px;
+    padding: 0;
+    background-color: #1bba80;
+  }
+  .profile-image {
+    background-color: #ffffff;
+    background-image: url("../assets/profile.jpeg");
+    background-size: cover;
+    height: 124px;
+    width: 124px;
+  }
+  .profile-name {
+    height: 124px;
+    min-width: 124px;
+  }
+  .profile-header {
+    p {
+      margin: 0;
+      font-size: 12px;
+    }
+  }
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .profile-container-section {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding: 24px;
+  }
+  .profile-name-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 4px;
+    b {
+      font-weight: 600;
+    }
+    p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 100;
+    }
+  }
+</style>

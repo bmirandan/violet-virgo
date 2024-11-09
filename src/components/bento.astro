@@ -1,0 +1,37 @@
+---
+import { clsx } from "clsx";
+
+const { header, content, class: className, ...rest } = Astro.props;
+---
+
+<div class={clsx("bento-container", className)} {...rest}>
+  {header && <slot name="header">{header}</slot>}
+  <div class={clsx("bento-base")} {...rest}>
+    <slot name="content">{content}</slot>
+  </div>
+</div>
+
+<style>
+  .bento-container {
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    > h4 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+  .bento-base {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    height: auto;
+  }
+</style>
